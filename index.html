@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Heart Failure Detection</h1>
+        <form id="heartForm" action="/submit" method="post">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span class="tooltip" data-tooltip="Age of the patient.">ℹ️</span><br><br>
+
+            <label for="anaemia">Anaemia:</label>
+            <select id="anaemia" name="anaemia">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <span class="tooltip" data-tooltip="Decrease in red blood cells or hemoglobin.">ℹ️</span><br><br>
+
+            <label for="creatinine_phosphokinase">Creatinine Phosphokinase:</label>
+            <input type="number" id="creatinine_phosphokinase" name="creatinine_phosphokinase" required>
+            <span class="tooltip" data-tooltip="Level of the CPK enzyme in the blood.">ℹ️</span><br><br>
+
+            <label for="diabetes">Diabetes:</label>
+            <select id="diabetes" name="diabetes">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <span class="tooltip" data-tooltip="Whether the patient has diabetes.">ℹ️</span><br><br>
+
+            <label for="ejection_fraction">Ejection Fraction:</label>
+            <input type="number" id="ejection_fraction" name="ejection_fraction" required>
+            <span class="tooltip"
+                data-tooltip="Percentage of blood leaving the heart at each contraction.">ℹ️</span><br><br>
+
+            <label for="high_blood_pressure">High Blood Pressure:</label>
+            <select id="high_blood_pressure" name="high_blood_pressure">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <span class="tooltip" data-tooltip="Whether the patient has high blood pressure.">ℹ️</span><br><br>
+
+            <label for="platelets">Platelets:</label>
+            <input type="number" id="platelets" name="platelets" required>
+            <span class="tooltip" data-tooltip="Number of platelets in the blood.">ℹ️</span><br><br>
+
+            <label for="serum_creatinine">Serum Creatinine:</label>
+            <input type="number" id="serum_creatinine" name="serum_creatinine" required>
+            <span class="tooltip" data-tooltip="Level of creatinine in the blood.">ℹ️</span><br><br>
+
+            <label for="serum_sodium">Serum Sodium:</label>
+            <input type="number" id="serum_sodium" name="serum_sodium" required>
+            <span class="tooltip" data-tooltip="Level of sodium in the blood.">ℹ️</span><br><br>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+            <span class="tooltip" data-tooltip="Gender of the patient.">ℹ️</span><br><br>
+
+            <label for="smoking">Smoking:</label>
+            <select id="smoking" name="smoking">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <span class="tooltip" data-tooltip="Whether the patient smokes.">ℹ️</span><br><br>
+
+            <label for="time">Time:</label>
+            <input type="number" id="time" name="time" required>
+            <span class="tooltip" data-tooltip="Follow-up period in days.">ℹ️</span><br><br>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" id="cholesterol" name="cholesterol" required>
+            <span class="tooltip" data-tooltip="Cholesterol level in mg/dL.">ℹ️</span><br><br>
+
+            <label for="body_mass_index">Body Mass Index:</label>
+            <input type="number" id="body_mass_index" name="body_mass_index" required>
+            <span class="tooltip"
+                data-tooltip="BMI, calculated as weight in kg / (height in meters)^2.">ℹ️</span><br><br>
+
+            <label for="heart_rate">Heart Rate:</label>
+            <input type="number" id="heart_rate" name="heart_rate" required>
+            <span class="tooltip" data-tooltip="Heart rate measured in beats per minute.">ℹ️</span><br><br>
+
+            <label for="exercise_angina">Exercise Angina:</label>
+            <select id="exercise_angina" name="exercise_angina">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <span class="tooltip"
+                data-tooltip="Whether the patient experiences angina during exercise.">ℹ️</span><br><br>
+
+            <label for="st_slope">ST Slope:</label>
+            <input type="number" id="st_slope" name="st_slope" required>
+            <span class="tooltip" data-tooltip="Slope of the ST segment during peak exercise.">ℹ️</span><br><br>
+
+            <label for="num_vessels">Number of Vessels:</label>
+            <input type="number" id="num_vessels" name="num_vessels" required>
+            <span class="tooltip" data-tooltip="Number of major vessels colored by fluoroscopy.">ℹ️</span><br><br>
+
+            <label for="thalassemia">Thalassemia:</label>
+            <input type="number" id="thalassemia" name="thalassemia" required>
+            <span class="tooltip" data-tooltip="Type of thalassemia.">ℹ️</span><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
