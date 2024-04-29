@@ -1,0 +1,219 @@
+<HeartFailurePredictionGrid>
+    age:age
+    anaemia:anaemia
+    creatinine_phosphokinase:creatinine_phosphokinase
+    diabetes:diabetes
+    ejection_fraction:ejection_fraction
+    high_blood_pressure:high_blood_pressure
+    platelets:platelets
+    serum_creatinine:serum_creatinine
+    serum_sodium:serum_sodium
+    sex:sex
+    smoking:smoking
+    time:time
+    cholesterol:cholesterol
+    body_mass_index:body_mass_index
+    heart_rate:heart_rate
+    exercise_angina:exercise_angina
+    st_slope:st_slope
+    num_vessels:num_vessels
+    thalassemia:thalassemia
+    
+
+    GridLayout:
+        cols:1
+        size:root.width, root.height
+
+        Button:
+            text:"Heart Failure Prediction"
+            font_size:42
+            size_hint_y: None
+            text_size: (None, None)
+            background_color: 0, 0, 1, 1  # Blue color (RGBA format)
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:"Age:"
+            
+            Spinner:
+                id:age
+                values: [str(i) for i in range(15, 43)]
+                multiline:False
+
+            Label:
+                text:"Anaemia:"
+
+            Spinner:
+                id:anaemia
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Creatinine Phosphokinase:"
+
+            TextInput:
+                id:creatinine_phosphokinase
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Diabetes:"
+
+            Spinner:
+                id:diabetes
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Ejection Fraction:"
+
+            TextInput:
+                id:ejection_fraction
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"High Blood Pressure:"
+
+            Spinner:
+                id:high_blood_pressure
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Platelets:"
+
+            TextInput:
+                id:platelets
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Serum Creatinine:"
+
+            TextInput:
+                id:serum_creatinine
+                multiline:False
+                input_filter: 'float'
+
+            Label:
+                text:"Serum Sodium:"
+
+            TextInput:
+                id:serum_sodium
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Sex:"
+
+            Spinner:
+                id:sex
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Smoking:"
+
+            Spinner:
+                id:smoking
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Time:"
+
+            TextInput:
+                id:time
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Cholesterol:"
+
+            TextInput:
+                id:cholesterol
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Body Mass Index:"
+
+            TextInput:
+                id:body_mass_index
+                multiline:False
+                input_filter: 'float'
+
+            Label:
+                text:"Heart Rate:"
+
+            TextInput:
+                id:heart_rate
+                multiline:False
+                input_filter: "int"
+
+            Label:
+                text:"Exercise Angina:"
+
+            Spinner:
+                id:exercise_angina
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"ST Slope:"
+
+            Spinner:
+                id:st_slope
+                multiline:False
+                values: [str(i) for i in range(1, 3)]
+
+            Label:
+                text:"Number of Vessels:"
+
+            Spinner:
+                id:num_vessels
+                multiline:False
+                values: [str(i) for i in range(0, 2)]
+
+            Label:
+                text:"Thalassemia:"
+
+            Spinner:
+                id:thalassemia
+                multiline:False
+                values: ['3', '4', '6', '7']
+        
+            Button:
+                text:"Predict"
+                font_size:32
+                on_press:root.press()
+                background_color: 1, 0, 0, 1  # Red color (RGBA format)
+                size_hint_y: None
+                text_size: (None, None)
+
+            Button:
+                text:"Reset"
+                font_size:32
+                on_press:root.reset_values()
+                background_color: 0, 1, 0, 1  # Green color (RGBA format)
+                size_hint_y: None
+                text_size: (None, None)
+
+        Label:
+            id:result
+            text:"Your result will be displayed here!"
+            font_size:24
+            size_hint_y:None
+            height:50
+        
+        Label:
+            id:note
+            text:"Note: The result will have accuracy upto 88.7%"
+            font_size:15
+            size_hint_y:None
+            height:50
+
+        
